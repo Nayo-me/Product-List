@@ -1,0 +1,19 @@
+edit-product-section{
+    background-color:   rgb(231, 231, 231);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.box-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid  #c8daf8;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.pr-name{
+    font-size: 20px;
+    color: black;
+}
