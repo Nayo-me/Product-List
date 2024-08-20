@@ -30,6 +30,10 @@ export class ProductService {
     return this.http.get<ProductResponse>(this.baseUrl + 'api/products');
   } //when starting the application to product data should be loaded. 
 
+  getProductById(id: any){
+    return this.http.get<any>(`${this.baseUrl}api/products/${id}`);
+  }
+
   getQuantity(): Observable<ProductResponse> {
     return this.http.get<ProductResponse>(this.baseUrl + 'api/products/{quantity}/')
   }
@@ -37,7 +41,6 @@ export class ProductService {
   updateProduct(product : Product): Observable<any> {
     return this.http.put<any>(this.baseUrl + 'api/products', product);
   }
-
 }
 
 

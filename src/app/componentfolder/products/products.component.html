@@ -18,14 +18,6 @@
         >
           Add Product
         </button>
-        <!-- <button
-          *ngIf="showAddProduct"
-          type="button"
-          class="btn btn-outline-primary"
-          (click)="hideAddProducts()"
-        >
-          Close Products
-        </button> -->
       </div>
       <table class="table">
         <thead class="thead-light t-head">
@@ -57,13 +49,15 @@
               <p *ngIf="+product.quantity > 50">Sufficient inventory</p>
             </td>
             <td>
-              <button
+              <a [routerLink]="['/view-products', product.id]"> 
+                <button
                 type="button"
                 [disabled]="rowIndex != i"
                 class="btn-xs icon"
               >
                 <i class="fa fa-eye"></i>
               </button>
+              </a>
               <button
                 type="button"
                 [disabled]="rowIndex != i"

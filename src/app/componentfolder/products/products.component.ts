@@ -6,13 +6,14 @@ import { CommonModule } from '@angular/common';
 import { ContentLimiterPipe } from '../../pipe/content-limiter.pipe';
 import { EditProductComponent } from "../edit-product/edit-product.component";
 import { ViewProductDetailsComponent } from "../view-product-details/view-product-details.component";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css'],
   standalone: true,
-  imports: [CommonModule, AddProductComponent, ContentLimiterPipe, EditProductComponent, ViewProductDetailsComponent]
+  imports: [CommonModule, AddProductComponent, ContentLimiterPipe, EditProductComponent, ViewProductDetailsComponent, RouterLink]
 })
 export class ProductsComponent implements OnInit {
   public rowIndex! : number;
